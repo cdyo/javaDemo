@@ -1,0 +1,64 @@
+<allocations>
+    <queue name="root">
+        <maxRunningApps>1000</maxRunningApps>
+        <weight>1.0</weight>
+        <!--与其他队列非比例的共享集群。权重默认值是1。
+                                  集群中有空闲资源时候，每个资源池都可以根据权重获得不同比例的集群空闲资源。
+        如果一个队列的权重是2，那么这个队列将会获得接近默认权重值2倍的资源。-->
+        <schedulingMode>fair</schedulingMode>
+        <maxResources>368640mb,72vcores</maxResources>
+        <minResources>2048mb,2vcores</minResources>
+        <aclSubmitApps> </aclSubmitApps>
+        <aclAdministerApps> </aclAdministerApps>
+
+        <queue name="dev1">
+            <minResources>2048mb,2vcores</minResources>
+            <maxResources>100000mb,20vcores</maxResources>
+            <maxRunningApps>100</maxRunningApps>
+            <weight>2.0</weight>
+            <schedulingPolicy>drf</schedulingPolicy>
+            <!--任一队列都可以设置调度策略。允许的值包括内置“fifo”，“fair”，“drf”-->
+            <aclAdministerApps>dev1 dev1</aclAdministerApps>
+            <!--管理队列的用户或者群组的列表。当前的唯一管理动作就是杀死一个应用程序-->
+            <!--这个配置的格式： user1,user2 [空格] group1,group2-->
+            <aclSubmitApps>dev1 dev1</aclSubmitApps>
+            <!--可向队列中提交应用程序的用户列表，默认情况下为“*”该属性具有继承性，即子队列的列表会继承父队列的列表-->
+        </queue>
+
+        <queue name="dev2">
+            <minResources>2048mb,2vcores</minResources>
+            <maxResources>100000mb,20vcores</maxResources>
+            <maxRunningApps>100</maxRunningApps>
+            <weight>1.0</weight>
+            <schedulingPolicy>drf</schedulingPolicy>
+            <aclAdministerApps>dev2 dev2</aclAdministerApps>
+            <aclSubmitApps>dev2 dev2</aclSubmitApps>
+        </queue>
+
+        <queue name="dev3">
+            <minResources>2048mb,2vcores</minResources>
+            <maxResources>100000mb,20vcores</maxResources>
+            <maxRunningApps>100</maxRunningApps>
+            <weight>1.0</weight>
+            <schedulingPolicy>drf</schedulingPolicy>
+            <aclAdministerApps>dev3 dev3</aclAdministerApps>
+            <aclSubmitApps>dev3,cdy dev3,cdy</aclSubmitApps>
+        </queue>
+
+        <queue name="default">
+            <minResources>2048mb,2vcores</minResources>
+            <maxResources>68640mb,12vcores</maxResources>
+            <maxRunningApps>100</maxRunningApps>
+            <weight>1.0</weight>
+            <schedulingPolicy>drf</schedulingPolicy>
+            <aclAdministerApps>*</aclAdministerApps>
+            <aclSubmitApps>*</aclSubmitApps>
+        </queue>
+
+    </queue>
+    <defaultQueueSchedulingPolicy>drf</defaultQueueSchedulingPolicy>
+    <queuePlacementPolicy>
+        <rule name="specified" create="true"/>
+        <rule name="user" create="true"/>
+    </queuePlacementPolicy>
+</allocations>

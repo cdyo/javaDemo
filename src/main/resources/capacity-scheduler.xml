@@ -1,0 +1,283 @@
+<configuration>
+    <property>
+        <name>yarn.scheduler.capacity.maximum-applications</name>
+        <value>10000</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.maximum-am-resource-percent</name>
+        <value>0.1</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.resource-calculator</name>
+        <value>org.apache.hadoop.yarn.util.resource.DominantResourceCalculator</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.queues</name>
+        <value>default,bonc</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.acl_submit_applications</name>
+        <value> </value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.acl_administer_queue</name>
+        <value> </value>
+    </property>
+
+
+    <!--root.defualt START-->
+    <property>
+        <name>yarn.scheduler.capacity.root.default.capacity</name>
+        <value>10</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.default.user-limit-factor</name>
+        <value>1</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.default.maximum-capacity</name>
+        <value>100</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.default.state</name>
+        <value>RUNNING</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.default.acl_submit_applications</name>
+        <value>*</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.default.acl_administer_queue</name>
+        <value>*</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.default.maximum-application-lifetime</name>
+        <value>86400</value>
+    </property>
+    <!--root.default END-->
+
+    <!--root.bonc START-->
+    <property>
+        <name>yarn.scheduler.capacity.root.bonc.capacity</name>
+        <value>90</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.bonc.user-limit-factor</name>
+        <value>0.8</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.bonc.maximum-capacity</name>
+        <value>100</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.bonc.state</name>
+        <value>RUNNING</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.bonc.acl_submit_applications</name>
+        <value> </value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.bonc.acl_administer_queue</name>
+        <value> </value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.bonc.queues</name>
+        <value>dev1,dev2,dev3,dev4,dev5</value>
+    </property>
+
+    <!--root.bonc.dev1 START-->
+    <property>
+        <name>yarn.scheduler.capacity.root.bonc.dev1.capacity</name>
+        <value>20</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.bonc.dev1.user-limit-factor</name>
+        <value>1.0</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.bonc.dev1.maximum-capacity</name>
+        <value>100</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.bonc.dev1.state</name>
+        <value>RUNNING</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.bonc.dev1.acl_submit_applications</name>
+        <value>dev1 dev1</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.bonc.sxbdb.acl_administer_queue</name>
+        <value>dev1 dev1</value>
+    </property>
+
+
+    <!--root.bonc.dev2 START-->
+    <property>
+        <name>yarn.scheduler.capacity.root.bonc.dev2.capacity</name>
+        <value>20</value>
+        <description>Default queue target capacity.</description>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.bonc.dev2.user-limit-factor</name>
+        <value>1.0</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.bonc.dev2.maximum-capacity</name>
+        <value>100</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.bonc.dev2.state</name>
+        <value>RUNNING</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.bonc.dev2.acl_submit_applications</name>
+        <value>dev2 dev2</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.bonc.dev2.acl_administer_queue</name>
+        <value>dev2 dev2</value>
+    </property>
+
+    <!--root.bonc.dev3 START-->
+    <property>
+        <name>yarn.scheduler.capacity.root.bonc.dev3.capacity</name>
+        <value>20</value>
+        <description>Default queue target capacity.</description>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.bonc.dev3.user-limit-factor</name>
+        <value>1.0</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.bonc.dev3.maximum-capacity</name>
+        <value>100</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.bonc.dev3.state</name>
+        <value>RUNNING</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.bonc.dev3.acl_submit_applications</name>
+        <value>dev3 dev3</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.bonc.dev3.acl_administer_queue</name>
+        <value>dev3 dev3</value>
+    </property>
+
+    <!--root.bonc.dev4 START-->
+    <property>
+        <name>yarn.scheduler.capacity.root.bonc.dev4.capacity</name>
+        <value>20</value>
+        <description>Default queue target capacity.</description>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.bonc.dev4.user-limit-factor</name>
+        <value>1.0</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.bonc.dev4.maximum-capacity</name>
+        <value>100</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.bonc.dev4.state</name>
+        <value>RUNNING</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.bonc.dev4.acl_submit_applications</name>
+        <value>dev4 dev4</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.bonc.dev4.acl_administer_queue</name>
+        <value>dev4 dev4</value>
+    </property>
+
+    <!--root.bonc.dev5 START-->
+    <property>
+        <name>yarn.scheduler.capacity.root.bonc.dev5.capacity</name>
+        <value>20</value>
+        <description>Default queue target capacity.</description>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.bonc.dev5.user-limit-factor</name>
+        <value>1.0</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.bonc.dev5.maximum-capacity</name>
+        <value>100</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.bonc.dev5.state</name>
+        <value>RUNNING</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.bonc.dev5.acl_submit_applications</name>
+        <value>dev5 dev5</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.bonc.dev5.acl_administer_queue</name>
+        <value>dev5 dev5</value>
+    </property>
+
+
+    <!--root.bonc END-->
+
+    <property>
+        <name>yarn.scheduler.capacity.node-locality-delay</name>
+        <value>40</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.queue-mappings</name>
+        <value>u:dev1:dev1,u:dev2:dev2,u:dev3:dev3,u:dev4:dev4,u:dev:dev5</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.queue-mappings-override.enable</name>
+        <value>false</value>
+    </property>
+</configuration>

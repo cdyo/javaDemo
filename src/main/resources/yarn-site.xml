@@ -1,0 +1,137 @@
+<configuration>
+    <property>
+        <name>yarn.resourcemanager.cluster-id</name>
+        <value>beh</value>
+        <final>false</final>
+    </property>
+
+    <property>
+        <name>yarn.resourcemanager.ha.rm-ids</name>
+        <value>rm1,rm2</value>
+        <final>false</final>
+    </property>
+
+    <property>
+        <name>yarn.resourcemanager.webapp.address.rm1</name>
+        <value>172.16.13.31:23188</value>
+        <final>false</final>
+    </property>
+
+    <property>
+        <name>yarn.resourcemanager.webapp.https.address.rm1</name>
+        <value>172.16.13.31:23189</value>
+        <final>false</final>
+    </property>
+
+    <property>
+        <name>yarn.resourcemanager.resource-tracker.address.rm1</name>
+        <value>172.16.13.31:23125</value>
+        <final>false</final>
+    </property>
+
+    <property>
+        <name>yarn.resourcemanager.scheduler.address.rm1</name>
+        <value>172.16.13.31:23130</value>
+        <final>false</final>
+    </property>
+
+    <property>
+        <name>yarn.resourcemanager.address.rm1</name>
+        <value>172.16.13.31:23140</value>
+        <final>false</final>
+    </property>
+
+    <property>
+        <name>yarn.resourcemanager.admin.address.rm1</name>
+        <value>172.16.13.31:23141</value>
+        <final>false</final>
+    </property>
+
+    <property>
+        <name>yarn.resourcemanager.webapp.address.rm2</name>
+        <value>172.16.13.32:23188</value>
+        <final>false</final>
+    </property>
+
+    <property>
+        <name>yarn.resourcemanager.webapp.https.address.rm2</name>
+        <value>172.16.13.32:23189</value>
+        <final>false</final>
+    </property>
+
+    <property>
+        <name>yarn.resourcemanager.resource-tracker.address.rm2</name>
+        <value>172.16.13.32:23125</value>
+        <final>false</final>
+    </property>
+
+    <property>
+        <name>yarn.resourcemanager.scheduler.address.rm2</name>
+        <value>172.16.13.32:23130</value>
+        <final>false</final>
+    </property>
+
+    <property>
+        <name>yarn.resourcemanager.address.rm2</name>
+        <value>172.16.13.32:23140</value>
+        <final>false</final>
+    </property>
+
+    <property>
+        <name>yarn.resourcemanager.admin.address.rm2</name>
+        <value>172.16.13.32:23141</value>
+        <final>false</final>
+    </property>
+
+    <property>
+        <name>yarn.nodemanager.address</name>
+        <value>0.0.0.0:23998</value>
+        <final>false</final>
+    </property>
+
+    <property>
+        <name>yarn.resourcemanager.ha.enabled</name>
+        <value>true</value>
+        <final>false</final>
+    </property>
+
+    <property>
+        <name>yarn.resourcemanager.ha.automatic-failover.enabled</name>
+        <value>true</value>
+        <final>false</final>
+    </property>
+
+    <property>
+        <name>yarn.resourcemanager.recovery.enabled</name>
+        <value>true</value>
+        <final>false</final>
+    </property>
+
+    <property>
+        <name>yarn.nodemanager.recovery.enabled</name>
+        <value>true</value>
+        <final>false</final>
+    </property>
+
+
+    <property>
+        <name>yarn.resourcemanager.scheduler.class</name>
+        <value>org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.CapacityScheduler</value>
+    </property>
+
+    <!--ACL Start-->
+    <property>
+        <name>yarn.acl.enable</name>
+        <value>true</value>
+    </property>
+
+    <property>
+        <name>yarn.admin.acl</name>
+        <value>hadoop</value>
+    </property>
+    <!--ACL End-->
+
+
+</configuration>
+
+
